@@ -1,0 +1,614 @@
+{
+  "version": 2,
+  "updated": "2026-08-26",
+  "stations": [
+    {
+      "id": "5fm",
+      "name": "5FM",
+      "group": "SABC",
+      "region": "National",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/5FMAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "metrofm",
+      "name": "Metro FM",
+      "group": "SABC",
+      "region": "National",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/METROFMAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "safm",
+      "name": "SAfm",
+      "group": "SABC",
+      "region": "National",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SAFMAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "rsg",
+      "name": "RSG",
+      "group": "SABC",
+      "region": "National",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RSGAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "radio2000",
+      "name": "Radio 2000",
+      "group": "SABC",
+      "region": "National",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO2000AAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "goodhope",
+      "name": "Good Hope FM",
+      "group": "SABC",
+      "region": "Western Cape",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/GOODHOPEFMAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "lotusfm",
+      "name": "Lotus FM",
+      "group": "SABC",
+      "region": "KwaZulu-Natal",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOTUSFMAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "ukhozi",
+      "name": "Ukhozi FM",
+      "group": "SABC",
+      "region": "KwaZulu-Natal",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/UKHOZIFMAAC_SC",
+      "country": "ZA"
+    },
+    {
+      "id": "umhlobo",
+      "name": "Umhlobo Wenene FM",
+      "group": "SABC",
+      "region": "Eastern Cape",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/UMHLOBOWENENEAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "lesedi",
+      "name": "Lesedi FM",
+      "group": "SABC",
+      "region": "Free State",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/LESEDIAAC_SC",
+      "country": "ZA"
+    },
+    {
+      "id": "motsweding",
+      "name": "Motsweding FM",
+      "group": "SABC",
+      "region": "North West",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/MOTSWEDINGAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "thobela",
+      "name": "Thobela FM",
+      "group": "SABC",
+      "region": "Limpopo",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/THOBELAAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "ikwekwezi",
+      "name": "Ikwekwezi FM",
+      "group": "SABC",
+      "region": "Mpumalanga",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/IKWEKWEZIAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "ligwalagwala",
+      "name": "Ligwalagwala FM",
+      "group": "SABC",
+      "region": "Mpumalanga",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/LIGWALAGWALAAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "phalaphala",
+      "name": "Phalaphala FM",
+      "group": "SABC",
+      "region": "Limpopo",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/PHALAPHALAAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "munghana",
+      "name": "Munghana Lonene FM",
+      "group": "SABC",
+      "region": "Limpopo",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/MUNGANALONENEAAC_SC",
+      "country": "ZA"
+    },
+    {
+      "id": "trufm",
+      "name": "Tru FM",
+      "group": "SABC",
+      "region": "Eastern Cape",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/TRUFMAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "xkfm",
+      "name": "X-K FM",
+      "group": "SABC",
+      "region": "Northern Cape",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/XKFMAAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "947",
+      "name": "947",
+      "group": "Commercial",
+      "region": "Gauteng",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/FM947_SC",
+      "country": "ZA"
+    },
+    {
+      "id": "kfm",
+      "name": "KFM 94.5",
+      "group": "Commercial",
+      "region": "Western Cape",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/KFM.mp3",
+      "country": "ZA"
+    },
+    {
+      "id": "jacaranda",
+      "name": "Jacaranda FM",
+      "group": "Commercial",
+      "region": "Gauteng",
+      "url": "https://edge.iono.fm/xice/jacarandafm_live_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "ecr",
+      "name": "East Coast Radio",
+      "group": "Commercial",
+      "region": "KwaZulu-Natal",
+      "url": "https://edge.iono.fm/xice/ecr_live_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "kaya",
+      "name": "Kaya 959",
+      "group": "Commercial",
+      "region": "Gauteng",
+      "url": "https://edge.iono.fm/xice/82_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "power987",
+      "name": "Power 98.7",
+      "group": "Commercial",
+      "region": "Gauteng",
+      "url": "https://edge.iono.fm/xice/65_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "hot1027",
+      "name": "Hot 102.7",
+      "group": "Commercial",
+      "region": "Gauteng",
+      "url": "https://edge.iono.fm/xice/57_high.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "algoa",
+      "name": "Algoa FM",
+      "group": "Commercial",
+      "region": "Eastern Cape",
+      "url": "https://edge.iono.fm/xice/54_high.mp3",
+      "country": "ZA"
+    },
+    {
+      "id": "ofm",
+      "name": "OFM",
+      "group": "Commercial",
+      "region": "Free State",
+      "url": "https://edge.iono.fm/xice/ofm_live_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "smile904",
+      "name": "Smile 90.4",
+      "group": "Commercial",
+      "region": "Western Cape",
+      "url": "https://edge.iono.fm/xice/212_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "classicfm",
+      "name": "Classic FM 102.7",
+      "group": "Commercial",
+      "region": "Gauteng",
+      "url": "https://edge.iono.fm/xice/49_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "capricorn",
+      "name": "Capricorn FM",
+      "group": "Commercial",
+      "region": "Limpopo",
+      "url": "https://edge.iono.fm/xice/67_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "gagasi",
+      "name": "Gagasi FM",
+      "group": "Commercial",
+      "region": "KwaZulu-Natal",
+      "url": "http://streaming.fabrik.fm/gagasi/echocast/audio/index.m3u8",
+      "country": "ZA"
+    },
+    {
+      "id": "yfm",
+      "name": "YFM 99.2",
+      "group": "Commercial",
+      "region": "Gauteng",
+      "url": "http://streaming.fabrik.fm/yfm/echocast/audio/index.m3u8",
+      "country": "ZA"
+    },
+    {
+      "id": "heartfm",
+      "name": "Heart FM",
+      "group": "Commercial",
+      "region": "Western Cape",
+      "url": "http://streaming.fabrik.fm/heartfm/echocast/audio/index.m3u8",
+      "country": "ZA"
+    },
+    {
+      "id": "702",
+      "name": "702",
+      "group": "Talk",
+      "region": "Gauteng",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/FM702_192AAC.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "capetalk",
+      "name": "CapeTalk",
+      "group": "Talk",
+      "region": "Western Cape",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/CAPE_TALKAAC_SC",
+      "country": "ZA"
+    },
+    {
+      "id": "radiotoday",
+      "name": "Radio Today",
+      "group": "Talk",
+      "region": "Gauteng",
+      "url": "https://rt1485.out.airtime.pro/rt1485_b",
+      "country": "ZA"
+    },
+    {
+      "id": "grootfm",
+      "name": "GrootFM 90.5",
+      "group": "Afrikaans",
+      "region": "Gauteng",
+      "url": "https://edge.iono.fm/xice/330_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "pretoriafm",
+      "name": "Pretoria FM",
+      "group": "Afrikaans",
+      "region": "Gauteng",
+      "url": "https://edge.iono.fm/xice/362_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "bokradio",
+      "name": "Bok Radio",
+      "group": "Afrikaans",
+      "region": "Western Cape",
+      "url": "http://bokradio.highquality.radiostream.co.za/",
+      "country": "ZA"
+    },
+    {
+      "id": "bosveld",
+      "name": "Bosveld Stereo",
+      "group": "Afrikaans",
+      "region": "Limpopo",
+      "url": "http://capeant.antfarm.co.za:8000/Bosveld",
+      "country": "ZA"
+    },
+    {
+      "id": "mfm926",
+      "name": "MFM 92.6",
+      "group": "Community",
+      "region": "Western Cape",
+      "url": "https://edge.iono.fm/xice/46_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "mix938",
+      "name": "Mix 93.8",
+      "group": "Community",
+      "region": "Gauteng",
+      "url": "https://edge.iono.fm/xice/113_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "jozifm",
+      "name": "Jozi FM",
+      "group": "Community",
+      "region": "Gauteng",
+      "url": "https://edge.iono.fm/xice/51_high.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "fmr",
+      "name": "Fine Music Radio",
+      "group": "Community",
+      "region": "Western Cape",
+      "url": "https://edge.iono.fm/xhls/fmr_live_high.m3u8",
+      "country": "ZA"
+    },
+    {
+      "id": "linkfm",
+      "name": "Link FM",
+      "group": "Community",
+      "region": "Eastern Cape",
+      "url": "https://de2.streamingpulse.com/ssl/LinkFM",
+      "country": "ZA"
+    },
+    {
+      "id": "radioislam",
+      "name": "Radio Islam",
+      "group": "Community",
+      "region": "Gauteng",
+      "url": "https://edge.iono.fm/xice/70_medium.aac",
+      "country": "ZA"
+    },
+    {
+      "id": "wsm650",
+      "name": "WSM 650 Nashville",
+      "group": "Classic Country",
+      "region": "Nashville, TN",
+      "url": "https://ais-sa8.cdnstream1.com/3666_96.aac",
+      "country": "US"
+    },
+    {
+      "id": "wsmroute650",
+      "name": "WSM Route 650 Americana",
+      "group": "Americana",
+      "region": "Nashville, TN",
+      "url": "https://stream01050.westreamradio.com/wsm2-mp3",
+      "country": "US"
+    },
+    {
+      "id": "977country",
+      "name": ".977 Country",
+      "group": "Country Hits",
+      "region": "USA",
+      "url": "https://15113.live.streamtheworld.com/977_COUNTRY_SC",
+      "country": "US"
+    },
+    {
+      "id": "americascountry",
+      "name": "America’s Country",
+      "group": "Country Hits",
+      "region": "USA",
+      "url": "https://ais-sa2.cdnstream1.com/1976_128.mp3",
+      "country": "US"
+    },
+    {
+      "id": "outlawcountry",
+      "name": "Outlaw Country",
+      "group": "Outlaw & Alt",
+      "region": "USA",
+      "url": "https://r.bgp.rodeo/listen/outlaw/radio.mp3",
+      "country": "US"
+    },
+    {
+      "id": "181kickin",
+      "name": "181.FM Kickin’ Country",
+      "group": "Country Hits",
+      "region": "USA",
+      "url": "https://listen.181fm.com/181-kickincountry_128k.mp3",
+      "country": "US"
+    },
+    {
+      "id": "18190s",
+      "name": "181.FM 90s Country",
+      "group": "Classic Country",
+      "region": "USA",
+      "url": "https://listen.181fm.com/181-90scountry_128k.mp3",
+      "country": "US"
+    },
+    {
+      "id": "18180s",
+      "name": "181.FM 80s Country",
+      "group": "Classic Country",
+      "region": "USA",
+      "url": "https://listen.181fm.com/181-80scountry_128k.mp3",
+      "country": "US"
+    },
+    {
+      "id": "181highway",
+      "name": "181.FM Highway 181",
+      "group": "Country Hits",
+      "region": "USA",
+      "url": "https://listen.181fm.com/181-highway_128k.mp3",
+      "country": "US"
+    },
+    {
+      "id": "181real",
+      "name": "181.FM Real Country",
+      "group": "Classic Country",
+      "region": "USA",
+      "url": "https://listen.181fm.com/181-realcountry_128k.mp3",
+      "country": "US"
+    },
+    {
+      "id": "kisscountry",
+      "name": "99.9 Kiss Country",
+      "group": "Country Hits",
+      "region": "Asheville, NC",
+      "url": "https://stream.revma.ihrhls.com/zc1577",
+      "country": "US"
+    },
+    {
+      "id": "big98",
+      "name": "The Big 98 (WSIX)",
+      "group": "Country Hits",
+      "region": "Nashville, TN",
+      "url": "https://stream.revma.ihrhls.com/zc2157",
+      "country": "US"
+    },
+    {
+      "id": "thebull1017",
+      "name": "101.7 The Bull",
+      "group": "Country Hits",
+      "region": "USA",
+      "url": "https://stream.revma.ihrhls.com/zc6586",
+      "country": "US"
+    },
+    {
+      "id": "wrwd1073",
+      "name": "Country 107.3 WRWD",
+      "group": "Country Hits",
+      "region": "Poughkeepsie, NY",
+      "url": "https://stream.revma.ihrhls.com/zc1497",
+      "country": "US"
+    },
+    {
+      "id": "hankfm",
+      "name": "101.5 Hank FM",
+      "group": "Classic Country",
+      "region": "USA",
+      "url": "https://ais-sa1.streamon.fm/7169_48k.aac",
+      "country": "US"
+    },
+    {
+      "id": "maxcountry",
+      "name": "104.9 Max Country",
+      "group": "Country Hits",
+      "region": "USA",
+      "url": "https://ais-sa1.streamon.fm/7246_48k.aac",
+      "country": "US"
+    },
+    {
+      "id": "thebrand941",
+      "name": "94.1 The Brand",
+      "group": "Country Hits",
+      "region": "USA",
+      "url": "https://ais-sa1.streamon.fm/7244_48k.aac",
+      "country": "US"
+    },
+    {
+      "id": "kora983",
+      "name": "KORA 98.3 Texas Country",
+      "group": "Texas Country",
+      "region": "Bryan, TX",
+      "url": "https://ais-sa1.streamon.fm/7410_48k.aac/playlist.m3u8",
+      "country": "US"
+    },
+    {
+      "id": "bluegrasscountry",
+      "name": "Bluegrass Country",
+      "group": "Bluegrass",
+      "region": "Washington, DC",
+      "url": "https://ice24.securenetsystems.net/WAMU",
+      "country": "US"
+    },
+    {
+      "id": "hpr1",
+      "name": "HPR1 Traditional Classic",
+      "group": "Classic Country",
+      "region": "USA",
+      "url": "https://us2.maindigitalstream.com/ssl/7713",
+      "country": "US"
+    },
+    {
+      "id": "hpr4",
+      "name": "HPR4 Bluegrass Gospel",
+      "group": "Bluegrass",
+      "region": "USA",
+      "url": "https://us2.maindigitalstream.com/ssl/7739",
+      "country": "US"
+    },
+    {
+      "id": "bootliquor",
+      "name": "SomaFM Boot Liquor",
+      "group": "Americana",
+      "region": "San Francisco, CA",
+      "url": "https://ice5.somafm.com/bootliquor-320-mp3",
+      "country": "US"
+    },
+    {
+      "id": "truckersradio",
+      "name": "Truckers Radio USA",
+      "group": "Country Hits",
+      "region": "USA",
+      "url": "https://streamer.radio.co/s81d30349a/low",
+      "country": "US"
+    },
+    {
+      "id": "texasrebel",
+      "name": "Texas Rebel Radio",
+      "group": "Texas Country",
+      "region": "Fredericksburg, TX",
+      "url": "https://ice41.securenetsystems.net/KNAF",
+      "country": "US"
+    },
+    {
+      "id": "kmkt931",
+      "name": "93.1 KMKT Katy Country",
+      "group": "Country Hits",
+      "region": "Sherman, TX",
+      "url": "https://live.amperwave.net/direct/alphacorporate-kmktfmmp3-ibc4",
+      "country": "US"
+    },
+    {
+      "id": "wkdf1033",
+      "name": "103.3 Country (WKDF)",
+      "group": "Country Hits",
+      "region": "Nashville, TN",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/WKDFFMAAC.aac",
+      "country": "US"
+    },
+    {
+      "id": "2000fmcountry",
+      "name": "2000 FM Country",
+      "group": "Country Hits",
+      "region": "USA",
+      "url": "https://bigrradio.cdnstream1.com/5103_128",
+      "country": "US"
+    },
+    {
+      "id": "downhomeden",
+      "name": "GotRadio Downhome Den",
+      "group": "Classic Country",
+      "region": "USA",
+      "url": "https://pureplay.cdnstream1.com/6048_64.aac",
+      "country": "US"
+    },
+    {
+      "id": "bluegrassjamboree",
+      "name": "The Bluegrass Jamboree",
+      "group": "Bluegrass",
+      "region": "USA",
+      "url": "https://the-bluegrass-jamboree.radiocult.fm/stream",
+      "country": "US"
+    },
+    {
+      "id": "star104country",
+      "name": "Classic Country 104",
+      "group": "Classic Country",
+      "region": "USA",
+      "url": "https://das-edge27-sa23-lax02.cdnstream.com/1071_64",
+      "country": "US"
+    }
+  ]
+}

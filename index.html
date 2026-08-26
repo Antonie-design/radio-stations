@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Radio</title>
+<meta name="theme-color" content="#0B0D10" />
+<!-- Lets iOS "Add to Home Screen" run this without Safari chrome. -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Radio" />
+<style>
+  :root {
+    --bg:#0B0D10; --surface:#14181D; --lift:#1C222A; --border:#252C36;
+    --text:#F2F5F8; --dim:#8A94A3; --accent:#FF4D2D; --accent-soft:rgba(255,77,45,.14);
+    --live:#2ED573;
+  }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body { margin:0; padding:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  body { padding-bottom:calc(84px + env(safe-area-inset-bottom)); }
+  header { display:flex; align-items:flex-end; justify-content:space-between;
+    padding:calc(12px + env(safe-area-inset-top)) 16px 10px; }
+  h1 { font-size:26px; font-weight:800; letter-spacing:-.5px; margin:0; }
+  h1 span { color:var(--accent); }
+  .count { color:var(--dim); font-size:12px; }
+  .chips { display:flex; gap:8px; padding:0 16px 12px; }
+  .chip { padding:9px 14px; border-radius:999px; background:var(--surface);
+    border:1px solid var(--border); color:var(--dim); font-size:13px; font-weight:600; cursor:pointer; }
+  .chip.on { background:var(--accent-soft); border-color:var(--accent); color:var(--accent); }
+  #search { width:calc(100% - 32px); margin:0 16px 12px; padding:11px 14px; border-radius:12px;
+    background:var(--surface); border:1px solid var(--border); color:var(--text); font-size:15px; }
+  #search::placeholder { color:var(--dim); }
+  .sect { color:var(--dim); font-size:11.5px; font-weight:700; letter-spacing:1.1px;
+    text-transform:uppercase; margin:14px 16px 8px; }
+  .card { display:flex; align-items:center; gap:12px; margin:0 16px 8px; padding:10px 12px;
+    border-radius:14px; background:var(--surface); border:1px solid var(--border); cursor:pointer; }
+  .card.on { border-color:var(--accent); background:var(--accent-soft); }
+  .card.off { opacity:.4; }
+  .tile { width:44px; height:44px; border-radius:11px; display:flex; align-items:center;
+    justify-content:center; font-weight:800; font-size:15px; color:#fff; flex:none; border:1.5px solid; }
+  .meta { flex:1; min-width:0; }
+  .nm { font-size:15.5px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .card.on .nm { color:var(--accent); }
+  .rg { color:var(--dim); font-size:12px; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .star { color:var(--accent); font-size:16px; }
+  .star.off { color:var(--border); }
+  #player { position:fixed; left:0; right:0; bottom:0; display:none; align-items:center; gap:12px;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom)); background:var(--lift);
+    border-top:1px solid var(--border); }
+  #player.show { display:flex; }
+  #pmeta { flex:1; min-width:0; }
+  #pname { font-size:15px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  #psub { color:var(--dim); font-size:12px; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  #psub.warn { color:var(--accent); }
+  .dot { width:7px; height:7px; border-radius:4px; background:var(--live); display:inline-block; margin-right:6px; }
+  button.ctl { width:44px; height:44px; border-radius:22px; border:0; background:var(--accent);
+    color:#fff; font-size:15px; font-weight:800; cursor:pointer; flex:none; }
+  button.ghost { background:none; color:var(--dim); font-size:16px; width:32px; }
+  .empty { color:var(--dim); text-align:center; margin-top:40px; font-size:14px; }
+  .note { color:var(--dim); font-size:12px; margin:0 16px 12px; line-height:1.5; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Radio<span>.</span></h1>
+  <div class="count" id="count"></div>
+</header>
+
+<div class="chips" id="chips"></div>
+<input id="search" placeholder="Search station, region or type" autocomplete="off" />
+<div class="note" id="note"></div>
+<div id="list"></div>
+
+<div id="player">
+  <div class="tile" id="ptile"></div>
+  <div id="pmeta">
+    <div id="pname"></div>
+    <div id="psub"></div>
+  </div>
+  <button class="ctl" id="ptoggle">▶</button>
+  <button class="ctl ghost" id="pstop">✕</button>
+</div>
+
+<audio id="audio" preload="none"></audio>
+
+<script>
+const PALETTE = [["#FF4D2D","#B4231C"],["#2D8CFF","#1B4FB8"],["#22C55E","#127A3C"],
+  ["#A855F7","#6B21A8"],["#F59E0B","#B45309"],["#EC4899","#9D174D"],
+  ["#06B6D4","#0E6F80"],["#8B5CF6","#4C1D95"]];
+const COUNTRIES = [{code:"ZA",label:"South Africa"},{code:"US",label:"USA · Country"}];
+const GROUP_ORDER = ["SABC","Commercial","Talk","Afrikaans","Community",
+  "Country Hits","Classic Country","Texas Country","Outlaw & Alt","Americana","Bluegrass"];
+
+// The page is served over HTTPS, so the browser will refuse to load an http://
+// stream. Those stations are shown greyed out instead of silently failing.
+const SECURE_PAGE = location.protocol === "https:";
+
+const store = {
+  get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+};
+
+let stations = [], country = store.get("country","ZA"), favs = store.get("favs",[]);
+let current = null, query = "";
+
+const audio = document.getElementById("audio");
+const $ = id => document.getElementById(id);
+
+function colorFor(id){ let h=0; for(let i=0;i<id.length;i++) h=(h*31+id.charCodeAt(i))>>>0; return PALETTE[h%PALETTE.length]; }
+function initials(name){
+  const c = name.replace(/[^A-Za-z0-9 ]/g," ").trim();
+  const d = c.match(/^\d+/); if (d) return d[0].slice(0,3);
+  const w = c.split(/\s+/).filter(Boolean);
+  return w.length===1 ? w[0].slice(0,2).toUpperCase() : (w[0][0]+w[1][0]).toUpperCase();
+}
+function blocked(s){ return SECURE_PAGE && s.url.startsWith("http:"); }
+
+function render(){
+  const q = query.trim().toLowerCase();
+  const mine = stations.filter(s => (s.country||"ZA") === country);
+  $("count").textContent = mine.length + " stations";
+
+  const blockedCount = mine.filter(blocked).length;
+  $("note").textContent = blockedCount
+    ? blockedCount + " station(s) are greyed out: they only stream over insecure HTTP, which browsers block on a secure page. They work in the Android app."
+    : "";
+
+  const match = q ? mine.filter(s =>
+    s.name.toLowerCase().includes(q) || s.region.toLowerCase().includes(q) || s.group.toLowerCase().includes(q)) : mine;
+
+  const fav = match.filter(s => favs.includes(s.id));
+  const rest = match.filter(s => !favs.includes(s.id));
+  const groups = new Map();
+  for (const s of rest) { if (!groups.has(s.group)) groups.set(s.group, []); groups.get(s.group).push(s); }
+  const ordered = [...groups.entries()].sort((a,b) => {
+    const ai = GROUP_ORDER.indexOf(a[0]), bi = GROUP_ORDER.indexOf(b[0]);
+    return (ai<0?99:ai) - (bi<0?99:bi);
+  });
+
+  const sections = (fav.length ? [["Favourites", fav]] : []).concat(ordered);
+  const list = $("list");
+  list.innerHTML = "";
+  if (!sections.length) { list.innerHTML = '<div class="empty">No station matches that.</div>'; return; }
+
+  for (const [title, items] of sections) {
+    const h = document.createElement("div"); h.className = "sect"; h.textContent = title; list.appendChild(h);
+    for (const s of items) {
+      const [c1,c2] = colorFor(s.id);
+      const off = blocked(s);
+      const el = document.createElement("div");
+      el.className = "card" + (current && current.id===s.id ? " on" : "") + (off ? " off" : "");
+      el.innerHTML =
+        '<div class="tile" style="background:'+c1+';border-color:'+c2+'">'+initials(s.name)+'</div>' +
+        '<div class="meta"><div class="nm"></div><div class="rg"></div></div>' +
+        '<div class="star'+(favs.includes(s.id)?'':' off')+'">★</div>';
+      el.querySelector(".nm").textContent = s.name;
+      el.querySelector(".rg").textContent = off ? "Not available in browser" : s.region;
+      el.querySelector(".star").onclick = e => { e.stopPropagation(); toggleFav(s.id); };
+      el.onclick = () => { if (!off) play(s); };
+      list.appendChild(el);
+    }
+  }
+}
+
+function toggleFav(id){
+  favs = favs.includes(id) ? favs.filter(x=>x!==id) : favs.concat(id);
+  store.set("favs", favs); render();
+}
+
+function setSub(text, warn){
+  $("psub").textContent = text;
+  $("psub").className = warn ? "warn" : "";
+}
+
+function play(s){
+  if (current && current.id === s.id) { toggle(); return; }
+  current = s;
+  const [c1,c2] = colorFor(s.id);
+  $("ptile").style.background = c1; $("ptile").style.borderColor = c2;
+  $("ptile").textContent = initials(s.name);
+  $("pname").textContent = s.name;
+  setSub("Connecting…");
+  $("player").classList.add("show");
+  audio.src = s.url;
+  audio.play().catch(err => setSub("Could not play · tap ▶ to retry", true));
+  render();
+  if ("mediaSession" in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: s.name, artist: s.group + " · " + s.region, album: "Radio"
+    });
+    navigator.mediaSession.setActionHandler("play", () => audio.play());
+    navigator.mediaSession.setActionHandler("pause", () => audio.pause());
+  }
+}
+
+function toggle(){
+  if (!current) return;
+  if (audio.paused) audio.play().catch(()=> setSub("Could not play · tap ▶ to retry", true));
+  else audio.pause();
+}
+
+function stop(){
+  audio.pause(); audio.removeAttribute("src"); audio.load();
+  current = null; $("player").classList.remove("show"); render();
+}
+
+$("ptoggle").onclick = toggle;
+$("pstop").onclick = stop;
+$("search").oninput = e => { query = e.target.value; render(); };
+
+audio.addEventListener("playing", () => {
+  $("ptoggle").textContent = "❚❚";
+  if (!current) return;
+  $("psub").className = "";
+  $("psub").innerHTML = '<span class="dot"></span>';
+  // Station/region as text, never innerHTML — names come from the station list.
+  $("psub").appendChild(document.createTextNode(current.group + " · " + current.region));
+});
+audio.addEventListener("pause", () => { $("ptoggle").textContent = "▶"; });
+audio.addEventListener("waiting", () => setSub("Buffering…"));
+audio.addEventListener("error", () => setSub("Stream unavailable · tap ▶ to retry", true));
+// A live stream should never end; if it does the connection dropped.
+audio.addEventListener("ended", () => {
+  setSub("Reconnecting…", true);
+  audio.load(); audio.play().catch(()=> setSub("Stream unavailable · tap ▶ to retry", true));
+});
+
+function buildChips(){
+  const wrap = $("chips"); wrap.innerHTML = "";
+  for (const c of COUNTRIES) {
+    const b = document.createElement("div");
+    b.className = "chip" + (c.code===country ? " on" : "");
+    b.textContent = c.label;
+    b.onclick = () => { country = c.code; store.set("country", country); buildChips(); render(); };
+    wrap.appendChild(b);
+  }
+}
+
+fetch("./stations.json", { cache: "no-store" })
+  .then(r => r.json())
+  .then(d => { stations = d.stations; buildChips(); render(); })
+  .catch(() => { $("list").innerHTML = '<div class="empty">Could not load the station list.</div>'; });
+</script>
+</body>
+</html>
