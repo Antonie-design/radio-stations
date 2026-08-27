@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "updated": "2026-08-26",
+  "version": 3,
+  "updated": "2026-08-27",
   "stations": [
     {
       "id": "5fm",
@@ -609,6 +609,326 @@
       "region": "USA",
       "url": "https://das-edge27-sa23-lax02.cdnstream.com/1071_64",
       "country": "US"
+    },
+    {
+      "id": "rockantenne",
+      "name": "ROCK ANTENNE",
+      "group": "Rock & Classic Rock",
+      "region": "Bayern",
+      "url": "https://stream.rockantenne.de/rockantenne/stream/mp3",
+      "country": "DE"
+    },
+    {
+      "id": "ra-classicperlen",
+      "name": "ROCK ANTENNE Classic Perlen",
+      "group": "Rock & Classic Rock",
+      "region": "Bayern",
+      "url": "https://stream.rockantenne.de/classic-perlen/stream/mp3",
+      "country": "DE"
+    },
+    {
+      "id": "ra-alternative",
+      "name": "ROCK ANTENNE Alternative",
+      "group": "Rock & Classic Rock",
+      "region": "Bayern",
+      "url": "https://stream.rockantenne.de/alternative/stream/mp3",
+      "country": "DE"
+    },
+    {
+      "id": "ra-heavymetal",
+      "name": "ROCK ANTENNE Heavy Metal",
+      "group": "Rock & Classic Rock",
+      "region": "Bayern",
+      "url": "https://stream.rockantenne.de/heavy-metal/stream/mp3",
+      "country": "DE"
+    },
+    {
+      "id": "bob-classicrock",
+      "name": "RADIO BOB! Classic Rock",
+      "group": "Rock & Classic Rock",
+      "region": "Kassel",
+      "url": "https://streams.radiobob.de/bob-classicrock/mp3-192/streams.radiobob.de/",
+      "country": "DE"
+    },
+    {
+      "id": "bob-70er",
+      "name": "RADIO BOB! 70er Rock",
+      "group": "Rock & Classic Rock",
+      "region": "Kassel",
+      "url": "https://streams.radiobob.de/70errock/mp3-192/streams.radiobob.de/",
+      "country": "DE"
+    },
+    {
+      "id": "ab-classicrock",
+      "name": "ANTENNE BAYERN Classic Rock",
+      "group": "Rock & Classic Rock",
+      "region": "Bayern",
+      "url": "https://s1-webradio.antenne.de/classic-rock-live",
+      "country": "DE"
+    },
+    {
+      "id": "0n-classicrock",
+      "name": "0N Classic Rock",
+      "group": "Rock & Classic Rock",
+      "region": "Deutschland",
+      "url": "https://0n-classicrock.radionetz.de/0n-classicrock.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "starfm-berlin",
+      "name": "StarFM Berlin",
+      "group": "Rock & Classic Rock",
+      "region": "Berlin",
+      "url": "https://stream.starfm.de/berlin/mp3-192/iradio",
+      "country": "DE"
+    },
+    {
+      "id": "rpr1-ndw",
+      "name": "RPR1. Neue Deutsche Welle",
+      "group": "NDW & 80s",
+      "region": "Rheinland-Pfalz",
+      "url": "https://rpr1.stream32.radiohost.de/rpr1_ndw_128k",
+      "country": "DE"
+    },
+    {
+      "id": "lautfm-ndw",
+      "name": "NDW Radio",
+      "group": "NDW & 80s",
+      "region": "Deutschland",
+      "url": "https://stream.laut.fm/ndw",
+      "country": "DE"
+    },
+    {
+      "id": "0nline-ndw",
+      "name": "0nlineradio NDW",
+      "group": "NDW & 80s",
+      "region": "Deutschland",
+      "url": "https://stream.0nlineradio.com/neuedeutschewelle",
+      "country": "DE"
+    },
+    {
+      "id": "80s80s",
+      "name": "80s80s Radio",
+      "group": "NDW & 80s",
+      "region": "Kiel",
+      "url": "https://streams.80s80s.de/web/mp3-192/streams.80s80s.de/",
+      "country": "DE"
+    },
+    {
+      "id": "80s80s-dm",
+      "name": "80s80s Depeche Mode",
+      "group": "NDW & 80s",
+      "region": "Kiel",
+      "url": "https://streams.80s80s.de/dm/mp3-192/streams.80s80s.de/",
+      "country": "DE"
+    },
+    {
+      "id": "0n-80s",
+      "name": "0N 80s",
+      "group": "NDW & 80s",
+      "region": "Deutschland",
+      "url": "https://0n-80s.radionetz.de/0n-80s.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "oldie-antenne",
+      "name": "OLDIE ANTENNE",
+      "group": "NDW & 80s",
+      "region": "Bayern",
+      "url": "https://s1-webradio.oldie-antenne.de/oldie-antenne",
+      "country": "DE"
+    },
+    {
+      "id": "ra-deutschrock",
+      "name": "ROCK ANTENNE Deutschrock",
+      "group": "Sung in German",
+      "region": "Bayern",
+      "url": "https://stream.rockantenne.de/deutschrock/stream/mp3",
+      "country": "DE"
+    },
+    {
+      "id": "bob-deutsch",
+      "name": "RADIO BOB! Deutsch Rock",
+      "group": "Sung in German",
+      "region": "Kassel",
+      "url": "https://streams.radiobob.de/bob-deutsch/mp3-192/mediaplayer",
+      "country": "DE"
+    },
+    {
+      "id": "regenbogen2-dr",
+      "name": "REGENBOGEN 2 Deutschrock",
+      "group": "Sung in German",
+      "region": "Baden-Württemberg",
+      "url": "https://stream.regenbogen2.de/deutschrock/mp3-128/radiobrowser",
+      "country": "DE"
+    },
+    {
+      "id": "lautfm-deutschrap",
+      "name": "Deutschrap Radio",
+      "group": "Sung in German",
+      "region": "Deutschland",
+      "url": "https://stream.laut.fm/deutschrap",
+      "country": "DE"
+    },
+    {
+      "id": "bigfm-deutschrap",
+      "name": "bigFM Deutschrap",
+      "group": "Sung in German",
+      "region": "Stuttgart",
+      "url": "https://stream.bigfm.de/rapfeature/mp3-128/radio-browser",
+      "country": "DE"
+    },
+    {
+      "id": "kissfm-deutschrap",
+      "name": "KISS FM Deutschrap",
+      "group": "Sung in German",
+      "region": "Berlin",
+      "url": "https://stream.kissfm.de/kissfm-germanbeats/mp3-192/internetradio",
+      "country": "DE"
+    },
+    {
+      "id": "schlagerparadies",
+      "name": "Schlagerparadies",
+      "group": "Sung in German",
+      "region": "Deutschland",
+      "url": "https://webstream.schlagerparadies.de/schlager30842",
+      "country": "DE"
+    },
+    {
+      "id": "radiopaloma",
+      "name": "Radio Paloma",
+      "group": "Sung in German",
+      "region": "Berlin",
+      "url": "https://icepool.silvacast.com/RADIOPALOMA.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "swr4bw",
+      "name": "SWR4 Baden-Württemberg",
+      "group": "Sung in German",
+      "region": "Stuttgart",
+      "url": "https://liveradio.swr.de/sw890cl/swr4bw/",
+      "country": "DE"
+    },
+    {
+      "id": "dlf",
+      "name": "Deutschlandfunk",
+      "group": "Talk & News",
+      "region": "Köln",
+      "url": "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "dlf-kultur",
+      "name": "Deutschlandfunk Kultur",
+      "group": "Talk & News",
+      "region": "Berlin",
+      "url": "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "dlf-nova",
+      "name": "Deutschlandfunk Nova",
+      "group": "Talk & News",
+      "region": "Köln",
+      "url": "https://st03.sslstream.dlf.de/dlf/03/128/mp3/stream.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "wdr5",
+      "name": "WDR 5",
+      "group": "Talk & News",
+      "region": "Köln",
+      "url": "https://wdr-wdr5-live.icecastssl.wdr.de/wdr/wdr5/live/mp3/128/stream.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "br24",
+      "name": "BR24",
+      "group": "Talk & News",
+      "region": "München",
+      "url": "https://dispatcher.rndfnk.com/br/br24/live/mp3/mid",
+      "country": "DE"
+    },
+    {
+      "id": "inforadio",
+      "name": "Inforadio",
+      "group": "Talk & News",
+      "region": "Berlin",
+      "url": "https://dispatcher.rndfnk.com/rbb/inforadio/live/mp3/mid",
+      "country": "DE"
+    },
+    {
+      "id": "radioeins",
+      "name": "radioeins",
+      "group": "Talk & News",
+      "region": "Berlin",
+      "url": "https://dispatcher.rndfnk.com/rbb/radioeins/live/mp3/mid",
+      "country": "DE"
+    },
+    {
+      "id": "swr3",
+      "name": "SWR3",
+      "group": "Pop & Charts",
+      "region": "Baden-Baden",
+      "url": "https://liveradio.swr.de/sw282p3/swr3/play.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "bayern3",
+      "name": "Bayern 3",
+      "group": "Pop & Charts",
+      "region": "München",
+      "url": "https://dispatcher.rndfnk.com/br/br3/live/mp3/mid",
+      "country": "DE"
+    },
+    {
+      "id": "1live",
+      "name": "1LIVE",
+      "group": "Pop & Charts",
+      "region": "Köln",
+      "url": "https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "wdr2",
+      "name": "WDR 2",
+      "group": "Pop & Charts",
+      "region": "Köln",
+      "url": "https://wdr-wdr2-rheinland.icecastssl.wdr.de/wdr/wdr2/rheinland/mp3/128/stream.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "ndr2",
+      "name": "NDR 2",
+      "group": "Pop & Charts",
+      "region": "Hamburg",
+      "url": "https://icecast.ndr.de/ndr/ndr2/hamburg/mp3/128/stream.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "njoy",
+      "name": "N-JOY",
+      "group": "Pop & Charts",
+      "region": "Hamburg",
+      "url": "https://icecast.ndr.de/ndr/njoy/live/mp3/128/stream.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "bremennext",
+      "name": "BREMEN NEXT",
+      "group": "Pop & Charts",
+      "region": "Bremen",
+      "url": "https://icecast.radiobremen.de/rb/bremennext/live/mp3/128/stream.mp3",
+      "country": "DE"
+    },
+    {
+      "id": "rbb888",
+      "name": "RBB 88.8",
+      "group": "Pop & Charts",
+      "region": "Berlin",
+      "url": "https://dispatcher.rndfnk.com/rbb/rbb888/live/mp3/mid",
+      "country": "DE"
     }
   ]
 }

@@ -9,6 +9,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="Radio" />
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icon-192.png" />
 <style>
   :root {
     --bg:#0B0D10; --surface:#14181D; --lift:#1C222A; --border:#252C36;
@@ -89,9 +91,10 @@
 const PALETTE = [["#FF4D2D","#B4231C"],["#2D8CFF","#1B4FB8"],["#22C55E","#127A3C"],
   ["#A855F7","#6B21A8"],["#F59E0B","#B45309"],["#EC4899","#9D174D"],
   ["#06B6D4","#0E6F80"],["#8B5CF6","#4C1D95"]];
-const COUNTRIES = [{code:"ZA",label:"South Africa"},{code:"US",label:"USA · Country"}];
+const COUNTRIES = [{code:"ZA",label:"South Africa"},{code:"US",label:"USA · Country"},{code:"DE",label:"Deutschland"}];
 const GROUP_ORDER = ["SABC","Commercial","Talk","Afrikaans","Community",
-  "Country Hits","Classic Country","Texas Country","Outlaw & Alt","Americana","Bluegrass"];
+  "Country Hits","Classic Country","Texas Country","Outlaw & Alt","Americana","Bluegrass",
+  "Rock & Classic Rock","NDW & 80s","Sung in German","Talk & News","Pop & Charts"];
 
 // The page is served over HTTPS, so the browser will refuse to load an http://
 // stream. Those stations are shown greyed out instead of silently failing.
@@ -238,10 +241,26 @@ function buildChips(){
   }
 }
 
-fetch("./stations.json", { cache: "no-store" })
-  .then(r => r.json())
+const REMOTE = "https://raw.githubusercontent.com/Antonie-design/radio-stations/main/stations.json";
+
+// In the desktop build the main process fetches the list (no CORS from file://).
+// In a browser, go remote-first and fall back to the copy beside this page.
+function fetchStations(){
+  if (window.radioBridge) return window.radioBridge.getStations();
+  return fetch(REMOTE, { cache: "no-store" })
+    .then(r => r.ok ? r : Promise.reject())
+    .catch(() => fetch("./stations.json", { cache: "no-store" }))
+    .then(r => r.json());
+}
+
+fetchStations()
   .then(d => { stations = d.stations; buildChips(); render(); })
   .catch(() => { $("list").innerHTML = '<div class="empty">Could not load the station list.</div>'; });
+
+// Hardware media keys, desktop only.
+if (window.radioBridge && window.radioBridge.onMediaKey) {
+  window.radioBridge.onMediaKey(a => { if (a === "stop") stop(); else toggle(); });
+}
 </script>
 </body>
 </html>
